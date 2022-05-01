@@ -1,0 +1,70 @@
+#ifndef ANIMRANGE_H
+#define ANIMRANGE_H
+
+#include "zsutilities.h"
+
+typedef enum
+{
+	ENTER_CROUCH,
+	START_WALK,
+	WALK_LEFT,
+	WALK_RIGHT,
+	STOP_WALK,
+	TURN_LEFT,
+	TURN_RIGHT,
+	STAB_ATTACK,
+	IDLE_BREATHING,
+	ONE_HAND_SLASH_ATTACK,
+	TWO_HAND_SLASH_ATTACK,
+	TWO_HAND_STAB_ATTACK,
+	BOW_ATTACK,
+	CROSSBOW_ATTACK,
+	THROW_ATTACK,
+	PUNCH_ATTACK,
+	TWO_WEAPON_ATTACK,
+	GET_HIT,
+	EXIT_CROUCH,
+	FALL_DOWN,
+	GET_UP,
+	CAST_RIVER,
+	CAST_FLAME,
+	DIE,
+	NONCOMBAT_START_WALK,
+	NONCOMBAT_WALK_LEFT,
+	NONCOMBAT_WALK_RIGHT,
+	NONCOMBAT_STOP_WALK,
+	NONCOMBAT_TURN_LEFT,
+	NONCOMBAT_TURN_RIGHT,
+	NONCOMBAT_DIE,
+	NONCOMBAT_IDLE,
+	DIE_FROM_GROUND,
+	NUM_ANIMATIONS,
+	CREATURE_ATTACK_ONE = STAB_ATTACK,
+	CREATURE_ATTACK_TWO = ONE_HAND_SLASH_ATTACK,
+} ANIMATION_RANGE_T;
+
+typedef struct 
+{
+	int StartFrame;
+	int EndFrame;
+} Animation;
+
+class AnimRange
+{
+	private:
+		Animation Animations[NUM_ANIMATIONS];
+				
+	public:
+		void Load(FILE *fp)
+		{
+			for(int n = 0; n < NUM_ANIMATIONS; n++)
+			{
+				Animations[n].StartFrame = GetInt(fp);
+				Animations[n].EndFrame = GetInt(fp);
+			}
+		}
+
+		inline Animation *GetAnim(ANIMATION_RANGE_T n) { return &Animations[n]; }
+};
+
+#endif

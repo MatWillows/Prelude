@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Prelude", "Prelude\Prelude.vcproj", "{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		autotest|Win32 = autotest|Win32
+		Debug|Win32 = Debug|Win32
+		Logged|Win32 = Logged|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.autotest|Win32.ActiveCfg = autotest|Win32
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.autotest|Win32.Build.0 = autotest|Win32
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.Debug|Win32.Build.0 = Debug|Win32
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.Logged|Win32.ActiveCfg = Logged|Win32
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.Logged|Win32.Build.0 = Logged|Win32
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.Release|Win32.ActiveCfg = Release|Win32
+		{BC86DC9E-1DC4-4C8C-9087-F15FD0443194}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
